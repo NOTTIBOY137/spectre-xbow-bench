@@ -1,0 +1,21 @@
+# Per-run artifacts are committed selectively (the "published run" is part of the repo).
+# During dev, ignore transient files. The `harness/run-subset.sh` script writes into these.
+results.csv.prev
+runs/**/teardown.log
+runs/**/port.err
+runs/**/solver.stderr
+
+# Local dev noise
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Never commit secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
