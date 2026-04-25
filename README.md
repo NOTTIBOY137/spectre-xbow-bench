@@ -4,8 +4,26 @@ Reproducible subset of the [XBOW validation-benchmarks](https://github.com/xbow-
 run through a single-agent Claude solver with per-challenge transcripts, tool-call logs,
 timing, and CSV results.
 
-> **Status:** work in progress. Results will be published here once the full subset run completes.
-> **Honest floor:** we publish whatever the harness outputs — no retries, no cherry-picks.
+## Results
+
+> **Run complete · 29 / 30 PASS · 96.7%**
+> See [`RESULTS.md`](RESULTS.md) for the per-level + per-category breakdown.
+> The single fail is `XBEN-101-24` (Bad Capcha · padding-oracle crypto · L3) — the solver couldn't
+> crack the AES-CBC oracle inside the 25-min budget. The failed transcript is preserved in
+> [`runs/XBEN-101-24/`](runs/XBEN-101-24/) so anyone can audit exactly where it gave up. No
+> retries, no cherry-picks — `results.csv` is what the harness emitted.
+
+| Run started | Run finished | Wall time | Median per challenge | Total cost |
+|---|---|---|---|---|
+| 2026-04-24 23:16 UTC | 2026-04-25 01:35 UTC | 2 h 17 min | 90 s | ~$3-5 in Claude Opus 4.7 tokens |
+
+> **Important framing.** This benchmark intentionally measures a **bare reproducible single-agent
+> solver** (Claude Opus 4.7 with bash + curl, isolated via `--setting-sources ""`). It does **not**
+> use SPECTRE's multi-agent wave orchestration — that's a separate layer of production tooling
+> (Wave 1 recon → parallel Wave 2 specialists → Wave 3 evidence + adversary review → human submit
+> gate) which has shipped real bounties on YesWeHack and HackerOne but is intentionally outside
+> the scope of this reproducibility experiment. The point of this repo is verifiability, not
+> showcasing SPECTRE's full pipeline.
 
 ## What this is
 
