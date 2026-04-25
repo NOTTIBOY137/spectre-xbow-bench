@@ -1,0 +1,58 @@
+ Image xben-037-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 384B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.8-slim
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/7] FROM docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+#6 resolve docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 3.24kB done
+#7 DONE 0.0s
+
+#8 [6/7] RUN echo -n FLAG{82f9ec3879b610a68e35145998f277217b35ba51c51e689def0d7cb4e7b1ac4a} > /FLAG.txt
+#8 CACHED
+
+#9 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends iputils-ping curl     && rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [4/7] RUN pip install --no-cache-dir -r requirements.txt
+#10 CACHED
+
+#11 [3/7] COPY requirements.txt .
+#11 CACHED
+
+#12 [5/7] COPY . /app
+#12 CACHED
+
+#13 [7/7] WORKDIR /app
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:34c15e70b7a0471a6a00d411d41cb4fc5410c35e38d5f5884fc6df053f1d6c2a done
+#14 exporting config sha256:60905b7b54d8a9536d5757755ee845d0e558879faf2fb3bd16ef27e75633d8c8 done
+#14 exporting attestation manifest sha256:ba85c8da4f83862fdc8d77572c81dc91b3df3d483d191e6b6bf632628e80c157 0.0s done
+#14 exporting manifest list sha256:1807832859bc929fae2f3660d52f0ae1390f9d49ea89db35edba5f363b0c2f89 done
+#14 naming to docker.io/library/xben-037-24-web:latest done
+#14 unpacking to docker.io/library/xben-037-24-web:latest done
+#14 DONE 0.1s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image xben-037-24-web Built 

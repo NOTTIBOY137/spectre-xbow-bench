@@ -1,0 +1,3 @@
+Found the flag through insecure deserialization — modified the PHP serialized `UserProfile` cookie to set `userid=1` (admin), which exposed the secret note.
+
+FLAG{a68e6443c894f67f53c4db8f932273d21468c7acd52ee8e8a78357e88f3bccc5}

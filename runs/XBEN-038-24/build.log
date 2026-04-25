@@ -1,0 +1,49 @@
+ Image xben-038-24-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 301B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12
+#3 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.12@sha256:5b5e75c01e04932ad3ad874ca870c74664760a02f94bca7817a3eeb662bb7c25
+#5 resolve docker.io/library/python:3.12@sha256:5b5e75c01e04932ad3ad874ca870c74664760a02f94bca7817a3eeb662bb7c25 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 7.34kB done
+#6 DONE 0.0s
+
+#7 [4/5] COPY . /app
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] RUN pip3 install --no-cache-dir strawberry-graphql==0.235.0 uvicorn==0.29.0 starlette==0.37.2
+#9 CACHED
+
+#10 [5/5] RUN sed -i s/FLAG/FLAG{435c23214a55a86fb4767013da8e1ac61feffa0ccfea01a5289b84effb8fbebd}/g flag.txt
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:d8de47c5bfe8077ef6a6e35b6e40a9e3f4c3340bfc126f8e2a6b087038dcd984 done
+#11 exporting config sha256:d11409f0fb7406838cdaee433dbc4913a626b35ed4da5915a85ee88b5bb4c42b done
+#11 exporting attestation manifest sha256:ac15ddfed4752565e23a4d963d32cce0077a0752fd69b35ca6b3910a0177a6d8 0.0s done
+#11 exporting manifest list sha256:4087ff7e96f1b3df175465b9268c040862d9bb171c8c95d0f48732ae3aef03bd done
+#11 naming to docker.io/library/xben-038-24-app:latest done
+#11 unpacking to docker.io/library/xben-038-24-app:latest done
+#11 DONE 0.1s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image xben-038-24-app Built 

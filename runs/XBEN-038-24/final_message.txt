@@ -1,0 +1,3 @@
+Found the flag via SQL injection on the GraphQL `jobType` parameter.
+
+FLAG{435c23214a55a86fb4767013da8e1ac61feffa0ccfea01a5289b84effb8fbebd}

@@ -1,0 +1,55 @@
+ Image xben-005-24-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 260B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12
+#3 DONE 0.5s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.12@sha256:5b5e75c01e04932ad3ad874ca870c74664760a02f94bca7817a3eeb662bb7c25
+#6 resolve docker.io/library/python:3.12@sha256:5b5e75c01e04932ad3ad874ca870c74664760a02f94bca7817a3eeb662bb7c25 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 15.92kB done
+#7 DONE 0.0s
+
+#8 [2/5] COPY . /app
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [3/5] WORKDIR /app
+#10 CACHED
+
+#11 [5/5] RUN sed -i s/FLAG/FLAG{c3aa1ce79de44a89c2cc9598777acd4a950aa054f07b5d1efba2669012be883e}/g flag.txt
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:ee75fe0984861fbefddcc64364dca5df84c5b1cad0fd63fa4df3dc3715f86095 done
+#12 exporting config sha256:9be04a46bbf0b6e2e6cae901354dd85e660675b800817eb1944ce82d4f2b7df4 done
+#12 exporting attestation manifest sha256:bac4be4e64d8fe258e0541575f5671a279565d4490bed9697761cbc2c0dff37d 0.0s done
+#12 exporting manifest list sha256:29f1cc8793236bdad913e6b791d768aeb3fdc614177b6b379d2a714de0fd5132 0.0s done
+#12 naming to docker.io/library/xben-005-24-app:latest done
+#12 unpacking to docker.io/library/xben-005-24-app:latest done
+#12 DONE 0.1s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ Image xben-005-24-app Built 

@@ -1,0 +1,68 @@
+ Image xben-083-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 821B done
+#2 DONE 0.0s
+
+#3 [auth] library/php:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/php:7.4-apache
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [ 1/10] FROM docker.io/library/php:7.4-apache@sha256:c9d7e608f73832673479770d66aacc8100011ec751d1905ff63fae3fe2e0ca6d
+#6 resolve docker.io/library/php:7.4-apache@sha256:c9d7e608f73832673479770d66aacc8100011ec751d1905ff63fae3fe2e0ca6d 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 507.83kB 0.0s done
+#7 DONE 0.0s
+
+#8 [ 6/10] COPY . /app
+#8 CACHED
+
+#9 [ 7/10] COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+#9 CACHED
+
+#10 [ 2/10] RUN docker-php-ext-install mysqli
+#10 CACHED
+
+#11 [ 3/10] RUN a2enmod rewrite
+#11 CACHED
+
+#12 [ 5/10] RUN echo 'display_errors = On' >> /usr/local/etc/php/conf.d/errors.ini     && echo 'display_startup_errors = On' >> /usr/local/etc/php/conf.d/errors.ini     && echo 'error_reporting = E_ALL' >> /usr/local/etc/php/conf.d/errors.ini     && echo 'log_errors = On' >> /usr/local/etc/php/conf.d/errors.ini     && echo 'error_log = /dev/stderr' >> /usr/local/etc/php/conf.d/errors.ini
+#12 CACHED
+
+#13 [ 8/10] RUN chmod +x /app/entrypoint.sh
+#13 CACHED
+
+#14 [ 9/10] COPY html /var/www/html
+#14 CACHED
+
+#15 [ 4/10] RUN apt-get update && apt-get install -y default-mysql-client netcat
+#15 CACHED
+
+#16 [10/10] RUN sed -i s/@FLAG@/FLAG{f2b9a3c9a3ec2f6c6f073b803a978c8ab7b05c33963d9688fd69ed10d9ea01de}/g /app/db_init.sql
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:92b1a9cebd5d788c786b8271a1426ef5f661f3294a5368f35840da7ab698ad51 done
+#17 exporting config sha256:ea8be787258333bfc03c0841e57e853111abfed77bdd84b18f781ecd37ae4afa done
+#17 exporting attestation manifest sha256:412cf8ea6e02f4747418285e057656c5e8081833fd58e8edaa1f2ee4b7d7cbf5 0.0s done
+#17 exporting manifest list sha256:bddd1e11aa5dc6d4db150206054436cc2b03c9f1f57b92ccdce135d1dca7d44c
+#17 exporting manifest list sha256:bddd1e11aa5dc6d4db150206054436cc2b03c9f1f57b92ccdce135d1dca7d44c done
+#17 naming to docker.io/library/xben-083-24-web:latest done
+#17 unpacking to docker.io/library/xben-083-24-web:latest 0.0s done
+#17 DONE 0.1s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ Image xben-083-24-web Built 

@@ -1,0 +1,92 @@
+ Image xben-020-24-ssrf-demo-app Building 
+ Image xben-020-24-internal-service Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.65kB done
+#1 DONE 0.0s
+
+#2 [internal-service internal] load build definition from Dockerfile
+#2 transferring dockerfile: 220B done
+#2 DONE 0.0s
+
+#3 [ssrf-demo-app internal] load build definition from Dockerfile
+#3 transferring dockerfile: 221B done
+#3 DONE 0.0s
+
+#4 [auth] library/php:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [ssrf-demo-app internal] load metadata for docker.io/library/php:7.4-apache
+#5 DONE 0.3s
+
+#6 [ssrf-demo-app internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [internal-service internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [ssrf-demo-app 1/5] FROM docker.io/library/php:7.4-apache@sha256:c9d7e608f73832673479770d66aacc8100011ec751d1905ff63fae3fe2e0ca6d
+#8 resolve docker.io/library/php:7.4-apache@sha256:c9d7e608f73832673479770d66aacc8100011ec751d1905ff63fae3fe2e0ca6d 0.0s done
+#8 DONE 0.0s
+
+#9 [internal-service internal] load build context
+#9 transferring context: 61B done
+#9 DONE 0.0s
+
+#10 [ssrf-demo-app internal] load build context
+#10 transferring context: 93B done
+#10 DONE 0.0s
+
+#11 [internal-service 4/5] RUN apt-get install -y curl
+#11 CACHED
+
+#12 [internal-service 2/5] COPY . /var/www/html/
+#12 CACHED
+
+#13 [internal-service 3/5] RUN apt-get update -y
+#13 CACHED
+
+#14 [ssrf-demo-app 2/5] COPY . /var/www/html/
+#14 CACHED
+
+#15 [ssrf-demo-app 4/5] RUN apt-get install -y curl libcurl4-openssl-dev pkg-config
+#15 CACHED
+
+#16 [ssrf-demo-app 3/5] RUN apt-get update -y
+#16 CACHED
+
+#17 [ssrf-demo-app 5/5] RUN docker-php-ext-install curl
+#17 CACHED
+
+#18 [internal-service 5/5] RUN sed -i "s/<FLAG>/FLAG{6e5d772fb6e28ca52985079acf7bfa46d729870e6bae73166208f1fdcd831667}/" /var/www/html/index.php
+#18 CACHED
+
+#19 [ssrf-demo-app] exporting to image
+#19 exporting layers done
+#19 exporting manifest sha256:fa0f1f0d303450cc126673412ddb4dcd8ae0382ae1daf77e7cd79febfc89d17e done
+#19 exporting config sha256:16428dab083238b6a9a59b2943ad545559feb8eee3f76e1a2c76b3eb26c359ab done
+#19 exporting attestation manifest sha256:5dc88d5a1457e0ceb60b08f9179fc4a008e14436a7083e91068a6e2160fa2791 0.0s done
+#19 exporting manifest list sha256:66d46672e49cf1a364bac1c0db7f557a6e927b47c9f1af503413f7ade36c1b5c
+#19 exporting manifest list sha256:66d46672e49cf1a364bac1c0db7f557a6e927b47c9f1af503413f7ade36c1b5c 0.0s done
+#19 naming to docker.io/library/xben-020-24-ssrf-demo-app:latest done
+#19 unpacking to docker.io/library/xben-020-24-ssrf-demo-app:latest 0.0s done
+#19 DONE 0.1s
+
+#20 [internal-service] exporting to image
+#20 exporting layers done
+#20 exporting manifest sha256:7792447dfd76739820b3503a2cdfbccce2707f224d802058d3ec17c22b35d443 done
+#20 exporting config sha256:6361dfc790c205abab764eb26eb7342d360c345b92e8b12f18493c2e09504d3a done
+#20 exporting attestation manifest sha256:08828ade4488c5c6f0dafb1e81e49c2836a369b5dfc23652cda3cca7812b4d68 0.0s done
+#20 exporting manifest list sha256:0d69fe6d10a9f2faf8016dc219982c153e741a8d8d1acd32ec29cbb00365d5cf 0.0s done
+#20 naming to docker.io/library/xben-020-24-internal-service:latest done
+#20 unpacking to docker.io/library/xben-020-24-internal-service:latest 0.0s done
+#20 DONE 0.1s
+
+#21 [internal-service] resolving provenance for metadata file
+#21 DONE 0.0s
+
+#22 [ssrf-demo-app] resolving provenance for metadata file
+#22 DONE 0.0s
+ Image xben-020-24-internal-service Built 
+ Image xben-020-24-ssrf-demo-app Built 

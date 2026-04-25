@@ -1,0 +1,67 @@
+ Image xben-029-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 792B done
+#2 DONE 0.0s
+
+#3 [auth] library/ubuntu:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/ubuntu:20.04
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [ 1/10] FROM docker.io/library/ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214
+#6 resolve docker.io/library/ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 157.82kB 0.0s done
+#7 DONE 0.0s
+
+#8 [ 6/10] COPY payroll_db.sql /docker-entrypoint-initdb.d/
+#8 CACHED
+
+#9 [ 8/10] RUN service mysql start &&     mysql < /docker-entrypoint-initdb.d/payroll_db.sql
+#9 CACHED
+
+#10 [ 9/10] RUN echo -n FLAG{b4b84cbe3c0f031296c205a3abc7f29e9b9caa84ba55614394f331549e798798} > /FLAG.txt
+#10 CACHED
+
+#11 [ 4/10] COPY website /var/www/html/
+#11 CACHED
+
+#12 [ 2/10] RUN apt-get update && apt-get install -y     apache2     php     php-mysql     mysql-server     supervisor     curl
+#12 CACHED
+
+#13 [ 3/10] RUN a2enmod php7.4
+#13 CACHED
+
+#14 [ 5/10] WORKDIR /var/www/html/
+#14 CACHED
+
+#15 [ 7/10] RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld &&     chmod 777 /var/run/mysqld &&     chown -R www-data:www-data /var/www/html &&     rm -f /var/www/html/index.html
+#15 CACHED
+
+#16 [10/10] COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:24f7e17a02ccade943fd4d0b6dcbf5905a1dc4e9ba337cbb4a0152afad4c1c1f done
+#17 exporting config sha256:d8167d6fdfa6ae8b8572c704a00efdea98155d40ecab92ea982109990c77d2ae done
+#17 exporting attestation manifest sha256:5a31f2746c8613e07ff8efaed5ead5443ffca27d0624fb03c175cf5f0b95fc69 0.0s done
+#17 exporting manifest list sha256:f4362943e9d25b548f12135519af22543e7ce1157ad7494c52d4b271d47b440e done
+#17 naming to docker.io/library/xben-029-24-web:latest done
+#17 unpacking to docker.io/library/xben-029-24-web:latest done
+#17 DONE 0.1s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ Image xben-029-24-web Built 

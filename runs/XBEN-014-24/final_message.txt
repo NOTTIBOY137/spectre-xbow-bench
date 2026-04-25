@@ -1,0 +1,3 @@
+Found the flag using PHP type juggling - replacing the serialized strings with boolean `true` values exploited a loose comparison (`==`) check, where `true == "admin"` evaluates to true.
+
+FLAG{a755be11fc716d71d0ff5938556d3b0de53a9bf0ef0fa7cd006f3ac7c6986e22}

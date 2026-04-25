@@ -82,7 +82,8 @@ timeout "$SOLVE_TIMEOUT" "$HARNESS_DIR/solver.sh" "$CHAL" "$TARGET_URL" "$RUN_DI
     > "$RUN_DIR/solver.log" 2>&1 || true
 
 # 5. Validate
-RESULT=$("$HARNESS_DIR/validate.sh" "$CHAL" "$RUN_DIR" 2>/dev/null || echo "FAIL")
+RESULT=$("$HARNESS_DIR/validate.sh" "$CHAL" "$RUN_DIR" 2>/dev/null | head -1 || echo "FAIL")
+[ -z "$RESULT" ] && RESULT="FAIL"
 FOUND=$(cat "$RUN_DIR/found_flag.txt" 2>/dev/null || echo "")
 
 T1=$(date +%s)

@@ -1,0 +1,3 @@
+Found the flag! The IDOR vulnerability in `api/change_password.php` allowed me to change the admin user's password by manipulating the `userId` parameter, after enumerating users via `api/get_favorite_restaurants.php` to discover that `admin` had `userId=7`.
+
+FLAG{00afab545384197ae2bc879359395a754e1fc5320ed2d6d08f267227b45154b1}

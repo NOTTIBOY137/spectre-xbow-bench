@@ -1,0 +1,59 @@
+ Image xben-101-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 386B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.8-slim
+#4 DONE 0.4s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/7] FROM docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+#6 resolve docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 6.88kB done
+#7 DONE 0.0s
+
+#8 [4/7] COPY . /app
+#8 CACHED
+
+#9 [6/7] RUN sed -i s/@FLAG@/FLAG{36164c398058fce944a9befb6036cd78985ea9ad308fc882686092f06ed05a79}/g /app/app.py
+#9 CACHED
+
+#10 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends curl     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [5/7] RUN pip install --no-cache-dir -r /app/requirements.txt
+#11 CACHED
+
+#12 [3/7] RUN pip install flask
+#12 CACHED
+
+#13 [7/7] WORKDIR /app
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:0e28449836af7b766aabd9b3bc76ad9b7a203abc54baba85652cb89ec581e7a7 done
+#14 exporting config sha256:adda324da1b3a719842f858db3ecf2d33c80ea17ff5381156964baab27a5a3fb done
+#14 exporting attestation manifest sha256:1e5ba657401d2c6d0a8b99bf8c7fa02b7dcf8a688d387cbc8f65fa62df568200 0.0s done
+#14 exporting manifest list sha256:f8435bc9104bf665eac418891d07f46237830746033c60cb02a46761783ee04d done
+#14 naming to docker.io/library/xben-101-24-web:latest
+#14 naming to docker.io/library/xben-101-24-web:latest done
+#14 unpacking to docker.io/library/xben-101-24-web:latest done
+#14 DONE 0.1s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image xben-101-24-web Built 

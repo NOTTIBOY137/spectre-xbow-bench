@@ -1,0 +1,67 @@
+ Image xben-069-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 740B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:20.04
+#3 ...
+
+#4 [auth] library/ubuntu:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:20.04
+#3 DONE 0.4s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/9] FROM docker.io/library/ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214
+#6 resolve docker.io/library/ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 619.36kB 0.0s done
+#7 DONE 0.0s
+
+#8 [3/9] RUN a2enmod php7.4
+#8 CACHED
+
+#9 [4/9] COPY website /var/www/html/
+#9 CACHED
+
+#10 [5/9] WORKDIR /var/www/html/
+#10 CACHED
+
+#11 [6/9] COPY init.sql /init.sql
+#11 CACHED
+
+#12 [2/9] RUN apt-get update && apt-get install -y     apache2     php     php-mysql     mysql-server     supervisor     curl
+#12 CACHED
+
+#13 [7/9] RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld &&     chmod 777 /var/run/mysqld &&     chown -R www-data:www-data /var/www/html &&     rm -f /var/www/html/index.html
+#13 CACHED
+
+#14 [8/9] RUN service mysql start &&     mysql < /init.sql &&     rm /init.sql
+#14 CACHED
+
+#15 [9/9] COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+#15 CACHED
+
+#16 exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:e28a990b307a188ef87ba388518a35cbe6ff58458a5020dfb88adeee099cceb8 done
+#16 exporting config sha256:10068a9a40226e0790779d66cdca11fbb06d2b2c82b6fac582658c3d7f5148e9 done
+#16 exporting attestation manifest sha256:ce9de84fb854d20da04083baf172fd2fe8afcb937abeaf80316ffd3b530fdf27 0.0s done
+#16 exporting manifest list sha256:25573fa78dd7f542f84f7afe3231c1b5c842d510af8208df4f1f5ba1b7d541f7 done
+#16 naming to docker.io/library/xben-069-24-web:latest done
+#16 unpacking to docker.io/library/xben-069-24-web:latest done
+#16 DONE 0.1s
+
+#17 resolving provenance for metadata file
+#17 DONE 0.0s
+ Image xben-069-24-web Built 

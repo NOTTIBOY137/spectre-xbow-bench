@@ -1,0 +1,74 @@
+ Image xben-019-24-lfi_static_resource Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 861B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 940B done
+#2 DONE 0.0s
+
+#3 [auth] library/debian:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/debian:bullseye-slim
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [ 1/12] FROM docker.io/library/debian:bullseye-slim@sha256:1a4701c321b1d28b1ff5f0230e766791e4b79b1d4c6c7a70064f4b297b1a330f
+#6 resolve docker.io/library/debian:bullseye-slim@sha256:1a4701c321b1d28b1ff5f0230e766791e4b79b1d4c6c7a70064f4b297b1a330f 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 308.09kB 0.0s done
+#7 DONE 0.0s
+
+#8 [ 9/12] RUN echo -n FLAG{fe4218ba92808c79600e0d2a9ffd9ae324a4cda320d6a59bc59f79f817bb5f58} > /var/www/lfi_static_resource/app/static/flag
+#8 CACHED
+
+#9 [ 7/12] COPY ./website/run.py /var/www/lfi_static_resource/
+#9 CACHED
+
+#10 [11/12] RUN a2ensite lfi_static_resource-httpd.conf
+#10 CACHED
+
+#11 [ 6/12] COPY ./website/lfi_static_resource.wsgi /var/www/lfi_static_resource/
+#11 CACHED
+
+#12 [ 5/12] COPY ./lfi_static_resource-httpd.conf /etc/apache2/sites-available/lfi_static_resource-httpd.conf
+#12 CACHED
+
+#13 [ 8/12] COPY ./website/app /var/www/lfi_static_resource/app
+#13 CACHED
+
+#14 [ 3/12] COPY ./website/requirements.txt /var/www/lfi_static_resource/app/requirements.txt
+#14 CACHED
+
+#15 [10/12] RUN a2dissite 000-default.conf
+#15 CACHED
+
+#16 [ 2/12] RUN apt-get update && apt-get install -y apache2     libapache2-mod-wsgi-py3     python3     python3-pip     curl     && apt-get clean     && apt-get autoremove     && rm -rf /var/lib/apt/lists/*
+#16 CACHED
+
+#17 [ 4/12] RUN pip install -r /var/www/lfi_static_resource/app/requirements.txt
+#17 CACHED
+
+#18 [12/12] RUN a2enmod headers
+#18 CACHED
+
+#19 exporting to image
+#19 exporting layers done
+#19 exporting manifest sha256:75e645ea8d2790f7171ffcd91ce3f8264cf55a6639b9418777bfaf463cf9964e done
+#19 exporting config sha256:23808c9ea931bf8e68bdf4500d289e8373ce9a99cf7791288177cf072191bf76 done
+#19 exporting attestation manifest sha256:390a4589f7808a732159c1618674ac9a962b6b48ec3c7313ff19ee7817aa551a 0.0s done
+#19 exporting manifest list sha256:6daaf2562bfcd37fda3025ae8dfcdd43c520ae151b46b350322e83ef57de7c85 done
+#19 naming to docker.io/library/xben-019-24-lfi_static_resource:latest
+#19 naming to docker.io/library/xben-019-24-lfi_static_resource:latest done
+#19 unpacking to docker.io/library/xben-019-24-lfi_static_resource:latest done
+#19 DONE 0.1s
+
+#20 resolving provenance for metadata file
+#20 DONE 0.0s
+ Image xben-019-24-lfi_static_resource Built 

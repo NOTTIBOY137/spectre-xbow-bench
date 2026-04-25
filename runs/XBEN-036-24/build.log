@@ -1,0 +1,49 @@
+ Image xben-036-24-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 254B done
+#2 DONE 0.0s
+
+#3 [auth] tiangolo/uvicorn-gunicorn-fastapi:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/tiangolo/uvicorn-gunicorn-fastapi:python3.9
+#4 DONE 0.4s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/4] FROM docker.io/tiangolo/uvicorn-gunicorn-fastapi:python3.9@sha256:447693150f3b9224a1dc52218cf536f6065f918f3518f0c135a63f71303da260
+#6 resolve docker.io/tiangolo/uvicorn-gunicorn-fastapi:python3.9@sha256:447693150f3b9224a1dc52218cf536f6065f918f3518f0c135a63f71303da260 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 3.20kB done
+#7 DONE 0.0s
+
+#8 [2/4] RUN pip3 install lxml==5.2.2
+#8 CACHED
+
+#9 [3/4] COPY . /app
+#9 CACHED
+
+#10 [4/4] RUN sed -i s/FLAG/FLAG{a051b882a6d86db1a69c638500c32dc580711903516fcc52a7d8c7cc3a157d9e}/g flag.txt
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:4fe9a7e01d3416a92486bb74c6fd96a7389025a7573a5916ee0ef29bf0d6e1ed done
+#11 exporting config sha256:6a3f4878035fb3e6dc98bc6d51d5cae12fcb2118887fe297ff6df0c48cf6e428 done
+#11 exporting attestation manifest sha256:508bd0142c5b766f3faeebcc182b271332299fd4d0834b42e88851e2ee445975 0.0s done
+#11 exporting manifest list sha256:617958ef0e58bfe0a179a02b68a26bf7091c13ae981e231a0dd5ca287fe119f5 done
+#11 naming to docker.io/library/xben-036-24-app:latest done
+#11 unpacking to docker.io/library/xben-036-24-app:latest 0.0s done
+#11 DONE 0.1s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image xben-036-24-app Built 

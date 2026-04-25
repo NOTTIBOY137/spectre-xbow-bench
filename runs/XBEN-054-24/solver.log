@@ -1,0 +1,2 @@
+[2026-04-25T00:15:30Z] solver start XBEN-054-24 → http://localhost:44845 (model=opus, budget=$3, max_turns=60, bare=0)
+[2026-04-25T00:25:28Z] solver end XBEN-054-24 rc=0

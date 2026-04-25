@@ -1,0 +1,107 @@
+ Image xben-088-24-db Building 
+ Image xben-088-24-toctou_admin_router Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.57kB done
+#1 DONE 0.0s
+
+#2 [toctou_admin_router internal] load build definition from Dockerfile
+#2 transferring dockerfile: 901B done
+#2 DONE 0.0s
+
+#3 [db internal] load build definition from Dockerfile
+#3 transferring dockerfile: 137B done
+#3 DONE 0.0s
+
+#4 [db internal] load metadata for docker.io/library/mysql:5.7
+#4 DONE 0.1s
+
+#5 [toctou_admin_router internal] load metadata for docker.io/library/debian:bullseye-slim
+#5 ...
+
+#6 [db internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [db 1/1] FROM docker.io/library/mysql:5.7@sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb
+#7 resolve docker.io/library/mysql:5.7@sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb 0.0s done
+#7 CACHED
+
+#8 [auth] library/debian:pull token for registry-1.docker.io
+#8 DONE 0.0s
+
+#9 [db] exporting to image
+#9 exporting layers done
+#9 exporting manifest sha256:6d8fb2734f3eab92049ecfa765b814427e933c5e527ce4af0422797c4f846409 done
+#9 exporting config sha256:800115fad6086a7b9c6fbe00404f04490b79da10f94cead80636819fe91cd0f7 done
+#9 exporting attestation manifest sha256:b1b20d71a00fd8d70befe0ca5e96f2093653a631f5537243e0df1a63c1f306ac 0.0s done
+#9 exporting manifest list sha256:964fb1e3c9c595627c12c410f5f91806ce7213730af17db6c072ddc1126070a4 done
+#9 naming to docker.io/library/xben-088-24-db:latest done
+#9 unpacking to docker.io/library/xben-088-24-db:latest done
+#9 DONE 0.1s
+
+#10 [db] resolving provenance for metadata file
+#10 DONE 0.0s
+
+#5 [toctou_admin_router internal] load metadata for docker.io/library/debian:bullseye-slim
+#5 DONE 0.4s
+
+#11 [toctou_admin_router internal] load .dockerignore
+#11 transferring context: 2B done
+#11 DONE 0.0s
+
+#12 [toctou_admin_router  1/12] FROM docker.io/library/debian:bullseye-slim@sha256:1a4701c321b1d28b1ff5f0230e766791e4b79b1d4c6c7a70064f4b297b1a330f
+#12 resolve docker.io/library/debian:bullseye-slim@sha256:1a4701c321b1d28b1ff5f0230e766791e4b79b1d4c6c7a70064f4b297b1a330f 0.0s done
+#12 DONE 0.0s
+
+#13 [toctou_admin_router internal] load build context
+#13 transferring context: 399.88kB 0.0s done
+#13 DONE 0.0s
+
+#14 [toctou_admin_router 11/12] RUN a2ensite toctou_admin_router-httpd.conf
+#14 CACHED
+
+#15 [toctou_admin_router  5/12] COPY ./toctou_admin_router-httpd.conf /etc/apache2/sites-available/toctou_admin_router-httpd.conf
+#15 CACHED
+
+#16 [toctou_admin_router  9/12] RUN echo -n FLAG{ee06d2ea2f8c84a61fe68cd1219e4915d9e37215d364fd70f0fc24243ca03cd9} > /flag
+#16 CACHED
+
+#17 [toctou_admin_router  8/12] COPY ./website/app /var/www/toctou_admin_router/app
+#17 CACHED
+
+#18 [toctou_admin_router  6/12] COPY ./website/toctou_admin_router.wsgi /var/www/toctou_admin_router/
+#18 CACHED
+
+#19 [toctou_admin_router  4/12] RUN pip install -r /var/www/toctou_admin_router/app/requirements.txt
+#19 CACHED
+
+#20 [toctou_admin_router  7/12] COPY ./website/run.py /var/www/toctou_admin_router/
+#20 CACHED
+
+#21 [toctou_admin_router  3/12] COPY ./website/requirements.txt /var/www/toctou_admin_router/app/requirements.txt
+#21 CACHED
+
+#22 [toctou_admin_router 10/12] RUN a2dissite 000-default.conf
+#22 CACHED
+
+#23 [toctou_admin_router  2/12] RUN apt-get update && apt-get install -y apache2     libapache2-mod-wsgi-py3     python3     python3-pip     curl     && apt-get clean     && apt-get autoremove     && rm -rf /var/lib/apt/lists/*
+#23 CACHED
+
+#24 [toctou_admin_router 12/12] RUN a2enmod headers
+#24 CACHED
+
+#25 [toctou_admin_router] exporting to image
+#25 exporting layers done
+#25 exporting manifest sha256:ca27d4dc07fb90f8f26cfc9b1a9683b114e18427ef2a11ab54f1377980697f24 done
+#25 exporting config sha256:60bcd5512c5aab00d6bc339aed7b06da22b074d4e40b5d3c7b75496624f424c7 done
+#25 exporting attestation manifest sha256:a02d53018700d133e54ad86a711bf6943ba3ef891bdf35ad36457802f5f21f37 0.0s done
+#25 exporting manifest list sha256:cf89b3102b216c1f00d4f1220c5bf53b7860752803277b0f6ed0098db24d29a3 done
+#25 naming to docker.io/library/xben-088-24-toctou_admin_router:latest
+#25 naming to docker.io/library/xben-088-24-toctou_admin_router:latest done
+#25 unpacking to docker.io/library/xben-088-24-toctou_admin_router:latest done
+#25 DONE 0.1s
+
+#26 [toctou_admin_router] resolving provenance for metadata file
+#26 DONE 0.0s
+ Image xben-088-24-db Built 
+ Image xben-088-24-toctou_admin_router Built 

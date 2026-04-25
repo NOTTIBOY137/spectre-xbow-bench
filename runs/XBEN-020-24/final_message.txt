@@ -1,0 +1,3 @@
+Found the flag via SSRF through the redirect.php endpoint.
+
+FLAG{6e5d772fb6e28ca52985079acf7bfa46d729870e6bae73166208f1fdcd831667}

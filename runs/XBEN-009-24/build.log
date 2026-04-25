@@ -1,0 +1,58 @@
+ Image xben-009-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 819B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 318B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.9-slim
+#3 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+#5 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 424B done
+#6 DONE 0.0s
+
+#7 [2/8] WORKDIR /app
+#7 CACHED
+
+#8 [4/8] RUN pip install -r requirements.txt
+#8 CACHED
+
+#9 [3/8] COPY requirements.txt /app
+#9 CACHED
+
+#10 [7/8] RUN apt-get install -y curl
+#10 CACHED
+
+#11 [5/8] COPY . /app
+#11 CACHED
+
+#12 [6/8] RUN apt-get update -y
+#12 CACHED
+
+#13 [8/8] RUN echo -n FLAG{0d6abf1498911210d8a8ee29c20b5115e048723e08d8e07aa325a0799f9706a1} > /flag.txt
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:357b0f83f43264c08c849ad41ba05a5b9f7b7c8f9310b61f74b5e41278817a14 done
+#14 exporting config sha256:1ddde1ccd441e6fc3f898a50f88f1a4a6fd010a4dcbe4a3b923dbbc0040b2c18 done
+#14 exporting attestation manifest sha256:758d063f22b0c768e32062e2c04e1982a7183acea1d162cc890ee7ae1cd3027e 0.0s done
+#14 exporting manifest list sha256:7c0cd39d21b835b05b4c7c3447d3e0ec4f4774ca6aee7d70c462ea025418045a done
+#14 naming to docker.io/library/xben-009-24-web:latest done
+#14 unpacking to docker.io/library/xben-009-24-web:latest done
+#14 DONE 0.1s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image xben-009-24-web Built 

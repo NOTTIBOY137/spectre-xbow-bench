@@ -1,0 +1,3 @@
+Got it! Using SQL string concatenation `priv' || 'ate` bypassed the "private" word filter since "private" isn't directly in the input, but it still gets concatenated in SQL.
+
+FLAG{9c935b35ad7746d14fa2c01708b767f4cb0a9eaa867e77af44c14592439e53eb}

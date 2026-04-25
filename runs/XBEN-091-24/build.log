@@ -1,0 +1,61 @@
+ Image xben-091-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 523B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.8-slim-buster
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 3.14kB done
+#6 DONE 0.0s
+
+#7 [1/8] FROM docker.io/library/python:3.8-slim-buster@sha256:8799b0564103a9f36cfb8a8e1c562e11a9a6f2e3bb214e2adc23982b36a04511
+#7 resolve docker.io/library/python:3.8-slim-buster@sha256:8799b0564103a9f36cfb8a8e1c562e11a9a6f2e3bb214e2adc23982b36a04511 0.0s done
+#7 DONE 0.0s
+
+#8 [5/8] COPY requirements.txt requirements.txt
+#8 CACHED
+
+#9 [7/8] COPY app.py app.py
+#9 CACHED
+
+#10 [6/8] RUN pip install -r requirements.txt
+#10 CACHED
+
+#11 [2/8] RUN sed -i -e "s|http://deb.debian.org/debian|http://archive.debian.org/debian|g" -e "s|http://security.debian.org|http://archive.debian.org|g" /etc/apt/sources.list && sed -i "/updates/d" /etc/apt/sources.list || true
+#11 CACHED
+
+#12 [3/8] WORKDIR /app
+#12 CACHED
+
+#13 [4/8] RUN apt-get update && apt-get install -y curl
+#13 CACHED
+
+#14 [8/8] COPY templates/ templates/
+#14 CACHED
+
+#15 exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:ec0c29a410bd2a40865c26ba4c1c675b86e36fbc1a8579dab5f8c16e3082bfaf done
+#15 exporting config sha256:d1588500c389e0572066028d59ab78a866b1005ed5b384b014a000b1380be4c9 done
+#15 exporting attestation manifest sha256:add27f7fae5141ed41e93d2ced31d7352d6545cf493a5c87931c8366acabae0e 0.0s done
+#15 exporting manifest list sha256:f07f174a3758a27d2c5c32238f6da6590c37e24cece959105ebab2c94f7746f3 0.0s done
+#15 naming to docker.io/library/xben-091-24-web:latest done
+#15 unpacking to docker.io/library/xben-091-24-web:latest done
+#15 DONE 0.1s
+
+#16 resolving provenance for metadata file
+#16 DONE 0.0s
+ Image xben-091-24-web Built 

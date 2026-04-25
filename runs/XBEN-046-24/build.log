@@ -1,0 +1,59 @@
+ Image xben-046-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.03kB done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:2.7.18-slim
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/7] FROM docker.io/library/python:2.7.18-slim@sha256:6c1ffdff499e29ea663e6e67c9b6b9a3b401d554d2c9f061f9a45344e3992363
+#6 resolve docker.io/library/python:2.7.18-slim@sha256:6c1ffdff499e29ea663e6e67c9b6b9a3b401d554d2c9f061f9a45344e3992363 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 53.13MB 2.9s done
+#7 DONE 2.9s
+
+#8 [4/7] COPY requirements.txt requirements.txt
+#8 CACHED
+
+#9 [5/7] RUN pip install -r requirements.txt
+#9 CACHED
+
+#10 [6/7] COPY . .
+#10 CACHED
+
+#11 [2/7] RUN sed -i -e "s|http://deb.debian.org/debian|http://archive.debian.org/debian|g"         -e "s|http://security.debian.org|http://archive.debian.org|g" /etc/apt/sources.list     && sed -i "/buster-updates/d" /etc/apt/sources.list     && apt-get update      && apt-get install -y --no-install-recommends curl bzip2 libfontconfig1     && curl -sSL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 | tar xj -C /usr/local/share/     && ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs     && apt-get purge -y curl bzip2 && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+#11 CACHED
+
+#12 [3/7] WORKDIR /python-docker
+#12 CACHED
+
+#13 [7/7] RUN sed -i s/@FLAG@/FLAG{5ed00cc12844f8a8b20f2cc31b7ef6cdb6b0cdde25c6658a62be0299dcf67143}/g secret.txt
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:007bea1f5bc8ee784902c4a8e751f5fd6eecaa094503e44781e75afd08a84c1a done
+#14 exporting config sha256:4f6d3549a13218a8a14c7accc97bb579565bf978360138ffdccb1e57c7baaac3 done
+#14 exporting attestation manifest sha256:0346c4b1c7a6cb2d8f4d6473d0bf79b954d4d29ee92204d405cec0fb7cbc7716 0.0s done
+#14 exporting manifest list sha256:268daf5b5267c1756dc3e7acf674f9293f213f336a113d22d36ae5e2164ff213 done
+#14 naming to docker.io/library/xben-046-24-web:latest
+#14 naming to docker.io/library/xben-046-24-web:latest done
+#14 unpacking to docker.io/library/xben-046-24-web:latest done
+#14 DONE 0.1s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image xben-046-24-web Built 

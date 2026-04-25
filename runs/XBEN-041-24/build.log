@@ -1,0 +1,61 @@
+ Image xben-041-24-php Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 652B done
+#2 DONE 0.0s
+
+#3 [auth] library/php:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/php:7.1-apache
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [1/8] FROM docker.io/library/php:7.1-apache@sha256:70eefcf4372b279101259e905996b7733a87688d0b48625af01b55947836bb1f
+#6 resolve docker.io/library/php:7.1-apache@sha256:70eefcf4372b279101259e905996b7733a87688d0b48625af01b55947836bb1f 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 1.81kB done
+#7 DONE 0.0s
+
+#8 [3/8] RUN apt-get update     && apt-get install -y --no-install-recommends curl     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [5/8] COPY ./apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+#9 CACHED
+
+#10 [6/8] RUN mkdir /var/www/html/upload
+#10 CACHED
+
+#11 [7/8] RUN chown -R www-data:www-data /var/www/html
+#11 CACHED
+
+#12 [2/8] RUN sed -i -e "s|http://deb.debian.org/debian|http://archive.debian.org/debian|g" -e "s|http://security.debian.org|http://archive.debian.org|g" /etc/apt/sources.list && sed -i "/buster-updates|stretch-updates/d" /etc/apt/sources.list
+#12 CACHED
+
+#13 [4/8] COPY ./challenge /var/www/html/
+#13 CACHED
+
+#14 [8/8] WORKDIR /var/www/html
+#14 CACHED
+
+#15 exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:e3d41162784707578e6f6a22ce8685d465d2c7a987a81574d77e30c925d6cac0 done
+#15 exporting config sha256:7b9994aa5fc3f7ce5c421f2ac8e1ffe6c3d763345fb0b725f91fc51d33f0fde8 done
+#15 exporting attestation manifest sha256:7c5269cd5c13fe8596d64fdbe6bf8e156c4e843bf096d258976798bbab84d2f6 0.0s done
+#15 exporting manifest list sha256:d0b46b29e60d2cb8bf4e262a025cc4d90e1b96d95fb851e6fca8c3293468f3a6 done
+#15 naming to docker.io/library/xben-041-24-php:latest done
+#15 unpacking to docker.io/library/xben-041-24-php:latest 0.0s done
+#15 DONE 0.1s
+
+#16 resolving provenance for metadata file
+#16 DONE 0.0s
+ Image xben-041-24-php Built 

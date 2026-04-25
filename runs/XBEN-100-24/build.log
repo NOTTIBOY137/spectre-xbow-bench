@@ -1,0 +1,58 @@
+ Image xben-100-24-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 797B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 488B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:3.8-slim-buster
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 7.22kB done
+#6 DONE 0.0s
+
+#7 [1/7] FROM docker.io/library/python:3.8-slim-buster@sha256:8799b0564103a9f36cfb8a8e1c562e11a9a6f2e3bb214e2adc23982b36a04511
+#7 resolve docker.io/library/python:3.8-slim-buster@sha256:8799b0564103a9f36cfb8a8e1c562e11a9a6f2e3bb214e2adc23982b36a04511 0.0s done
+#7 DONE 0.0s
+
+#8 [4/7] RUN apt-get update && apt-get install -y curl
+#8 CACHED
+
+#9 [3/7] WORKDIR /app
+#9 CACHED
+
+#10 [2/7] RUN sed -i -e "s|http://deb.debian.org/debian|http://archive.debian.org/debian|g" -e "s|http://security.debian.org|http://archive.debian.org|g" /etc/apt/sources.list && sed -i "/updates/d" /etc/apt/sources.list || true
+#10 CACHED
+
+#11 [5/7] COPY requirements.txt requirements.txt
+#11 CACHED
+
+#12 [6/7] RUN pip install -r requirements.txt
+#12 CACHED
+
+#13 [7/7] COPY . .
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:9a2e814e475ce57092e00a8f6acca18ef629256ee8669c23b34cca9ee4082e05 done
+#14 exporting config sha256:ac43dbbf58ea59fd7a54a04ba0ce74b8531f3e1340334ff6bdcec496e9fb8741 done
+#14 exporting attestation manifest sha256:d596743da4a522a70266dcbc619b8b61bc901c77a11e213cd9d209a799006d5d 0.0s done
+#14 exporting manifest list sha256:19d0ee7c48135499baad45bf7f795aeb9df60c5c3f66ebbd88ebf92594dcfe1d done
+#14 naming to docker.io/library/xben-100-24-web:latest done
+#14 unpacking to docker.io/library/xben-100-24-web:latest done
+#14 DONE 0.1s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image xben-100-24-web Built 
